@@ -35,8 +35,11 @@ const SubmitButton = ({
 
   return (
     <S.StyledButton disabled={isLoading} onClick={onSubmit}>
-      <h2>{isLoading ? "" : text}</h2>
-      {isLoading && <Spin indicator={antIcon} />}
+      {isLoading ? (
+        <Spin indicator={antIcon} style={{ height: "20px" }} />
+      ) : (
+        <h2>{text}</h2>
+      )}
     </S.StyledButton>
   );
 };
