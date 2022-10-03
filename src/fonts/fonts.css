@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Nekst-Black';
+    src:  local("Nekst-Black"), url("Nekst-Black.ttf") format('truetype');
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src:  local("Gilroy-Regular"), url("Gilroy-Regular.ttf") format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
