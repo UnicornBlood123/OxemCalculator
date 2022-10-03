@@ -15,29 +15,22 @@ const SubmitButton = ({
   );
   const onSubmit = () => {
     setIsLoading(true);
-    // fetch("https://eoj3r7f3r4ef6v4.m.pipedream.net", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(data),
-    // })
-    new Promise((reject: any) => {
-      setTimeout(() => {
-        reject();
-      }, 2000);
-    }).then(() => {
-      setIsLoading(false);
-    });
-    // .then((response) => response.json())
-    // .then((data) => {
-    //   setIsLoading(false);
-    //   console.log("Success:", data);
-    // })
-    // .catch((error) => {
-    //   setIsLoading(false);
-    //   console.error("Error:", error);
-    // });
+    fetch("https://eoj3r7f3r4ef6v4.m.pipedream.net", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setIsLoading(false);
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        setIsLoading(false);
+        console.error("Error:", error);
+      });
   };
 
   return (
