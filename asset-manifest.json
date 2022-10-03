@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/OxemCalculator/static/css/main.5eb847b1.css",
+    "main.js": "/OxemCalculator/static/js/main.d9f71a1d.js",
+    "static/media/Nekst-Black.ttf": "/OxemCalculator/static/media/Nekst-Black.dffaebf93d38d4c41536.ttf",
+    "static/media/Gilroy-Regular.ttf": "/OxemCalculator/static/media/Gilroy-Regular.fa652e766b6a85a1f9cb.ttf",
+    "index.html": "/OxemCalculator/index.html",
+    "main.5eb847b1.css.map": "/OxemCalculator/static/css/main.5eb847b1.css.map",
+    "main.d9f71a1d.js.map": "/OxemCalculator/static/js/main.d9f71a1d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5eb847b1.css",
+    "static/js/main.d9f71a1d.js"
+  ]
+}
