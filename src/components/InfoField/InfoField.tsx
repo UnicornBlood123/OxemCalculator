@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import * as S from "./InfoField.styles";
 import SubmitButton from "../SubmitButton/SubmitButton";
 import { IInfoField } from "./InfoField.interfaces";
@@ -9,7 +9,7 @@ const InfoField = ({
   data,
   isLoading,
   setIsLoading,
-}: IInfoField) => {
+}: IInfoField): ReactElement => {
   return (
     <S.InfoField>
       {data && isLoading !== undefined && setIsLoading ? (

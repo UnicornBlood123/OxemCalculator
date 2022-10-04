@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import * as S from "./Calculator.styles";
 import InfoField from "../InfoField/InfoField";
 import MonthField from "../../containers/MonthField/MonthField";
 import PriceField from "../../containers/PriceField/PriceField";
 import InitialPaymentField from "../../containers/InitialPaymentField/InitialPaymentField";
 
-const Calculator = () => {
+const Calculator = (): ReactElement => {
   const [priceValue, setPriceValue] = useState<number>(3300000);
   const [initialPaymentValue, setInitialPaymentValue] =
     useState<number>(100000);

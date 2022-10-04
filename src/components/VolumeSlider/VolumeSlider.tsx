@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import * as S from "./VolumeSlider.styles";
 import { IVolumeSlider } from "./VolumeSlider.interfaces";
 
@@ -8,7 +8,7 @@ const VolumeSlider = ({
   inputValue,
   onChange,
   isLoading,
-}: IVolumeSlider) => {
+}: IVolumeSlider): ReactElement => {
   return (
     <S.StyledSlider
       trackStyle={{ background: "#FF9514" }}

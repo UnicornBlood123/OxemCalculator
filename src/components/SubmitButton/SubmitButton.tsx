@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import * as S from "./SubmitButton.styles";
 import { ISubmitButton } from "./SubmitButton.interfaces";
 import { Spin } from "antd";
@@ -9,11 +9,11 @@ const SubmitButton = ({
   text,
   isLoading,
   setIsLoading,
-}: ISubmitButton) => {
+}: ISubmitButton): ReactElement => {
   const antIcon = (
     <LoadingOutlined style={{ fontSize: 21, color: "#C4C4C4" }} spin />
   );
-  const onSubmit = () => {
+  const onSubmit = (): void => {
     setIsLoading(true);
     fetch("https://eoj3r7f3r4ef6v4.m.pipedream.net", {
       method: "POST",

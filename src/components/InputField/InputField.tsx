@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from "react";
+import React, { memo, ReactElement, useEffect } from "react";
 import * as S from "./InputField.styles";
 import VolumeSlider from "../VolumeSlider/VolumeSlider";
 import { IInputField } from "./InputField.interfaces";
@@ -15,14 +15,14 @@ const InputField = ({
   step,
   min,
   max,
-}: IInputField) => {
+}: IInputField): ReactElement => {
   useEffect(() => {
     if (priceValue && inputValuePercent) {
       setInputValue(priceValue * inputValuePercent * 0.01);
     }
   }, [priceValue]);
 
-  const onChange = (newValue: unknown) => {
+  const onChange = (newValue: unknown): void => {
     if (priceValue && setInputValuePercent) {
       if (!newValue) {
         setInputValuePercent(min);
@@ -43,7 +43,7 @@ const InputField = ({
     }
   };
 
-  const onChangePercent = (newValue: unknown) => {
+  const onChangePercent = (newValue: unknown): void => {
     if (priceValue && setInputValuePercent) {
       setInputValue(priceValue * (newValue as number) * 0.01);
       setInputValuePercent(newValue as number);
