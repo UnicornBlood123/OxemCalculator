@@ -40,26 +40,24 @@ export const StepVolume = styled.span<{ border: boolean; isLoading: boolean }>`
 
 export const StyledInput = styled(InputNumber)`
   width: 100%;
-  border-radius: 16px;
-
-  border: 2px solid ${({ theme: { colors } }): string => colors.light_white};
-  &:focus,
-  &:active,
-  &:hover {
-    border: 2px solid ${({ theme: { colors } }): string => colors.light_white};
-  }
+  border: none;
+  background: none;
+  cursor: default;
   input {
     height: 68px;
     padding: 24px 16px;
     border-radius: 16px;
+    border: 2px solid ${({ theme: { colors } }): string => colors.light_white};
     background: ${({ theme: { colors } }): string => colors.light_white};
     color: ${({ theme: { colors } }): string => colors.grey};
     font-size: 30px;
     font-family: "Nekst-Black";
     &:disabled {
-      cursor: default;
-      background: ${({ theme: { colors } }): string => colors.light_white};
+      background: ${({ theme: { colors } }): string => colors.disabled_grey};
+      border: 2px solid
+        ${({ theme: { colors } }): string => colors.disabled_grey};
       color: ${({ theme: { colors } }): string => colors.light_grey};
+      cursor: default;
     }
     &:focus {
       background: ${({ theme: { colors } }): string => colors.white};

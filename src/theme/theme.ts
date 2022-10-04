@@ -1,6 +1,7 @@
 export const theme = {
   colors: {
     grey: "#575757",
+    disabled_grey: "rgb(243,243,244, 0.4)",
     black: "#111111",
     white: "#ffffff",
     light_black: "#333333",

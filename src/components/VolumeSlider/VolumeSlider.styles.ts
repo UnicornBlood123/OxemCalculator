@@ -28,11 +28,17 @@ export const StyledSlider = styled(Slider)<{ isLoading: boolean }>`
   ${(props) =>
     props.isLoading &&
     css`
-      .ant-slider-handle {
-        background: none;
+      .ant-slider-handle,
+      .ant-slider-handle:hover {
+        cursor: default;
+        background: ${({ theme: { colors } }): string => colors.dark_orange};
       }
-      .ant-slider-rail,
       .ant-slider-track {
+        cursor: default;
+        background-color: ${({ theme: { colors } }): string =>
+          colors.dark_orange} !important;
+      }
+      .ant-slider-rail {
         cursor: default;
       }
     `};
