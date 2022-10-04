@@ -60,7 +60,7 @@ const InputField = ({
           controls={false}
           min={priceValue ? min * 0.01 * priceValue : min}
           max={priceValue ? max * 0.01 * priceValue : max}
-          maxLength={7}
+          maxLength={18}
           value={
             priceValue
               ? Math.round(inputValue).toLocaleString("ru-RU") + " ₽"
