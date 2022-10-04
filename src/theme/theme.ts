@@ -10,5 +10,6 @@ export const theme = {
     light_white: "#f3f3f4",
     orange: "#ff9514",
     dark_orange: "rgba(255, 149, 20, 0.4)",
+    mobile_grey: "#333E48",
   },
 };

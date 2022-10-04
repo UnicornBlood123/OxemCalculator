@@ -41,10 +41,19 @@ export const InfoField = styled(InputField)`
   }
 `;
 
-export const InfoSumField = styled(Header)`
+export const InfoSumField = styled.span`
   margin: 0;
   width: 100%;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+  font-size: 54px;
+  line-height: 90%;
+  color: ${({ theme: { colors } }): string => colors.grey};
+  margin: 0;
+  font-family: "Nekst-Black";
+  @media (max-width: 1024px) {
+    color: ${({ theme: { colors } }): string => colors.light_black};
+  }
+  @media (max-width: 425px) {
+    font-size: 22px;
+    line-height: 20px;
+  }
 `;

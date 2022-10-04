@@ -29,6 +29,13 @@ export const StepVolume = styled.span<{ border: boolean; isLoading: boolean }>`
       width: 69px;
       top: 7px;
       right: 7px;
+      @media (max-width: 425px) {
+        width: 67px;
+        height: 48px;
+        font-size: 22px;
+        padding: 14px 14px;
+        line-height: 20px;
+      }
     `};
   ${(props) =>
     props.isLoading &&
@@ -36,6 +43,10 @@ export const StepVolume = styled.span<{ border: boolean; isLoading: boolean }>`
       cursor: default;
       color: ${({ theme: { colors } }): string => colors.light_grey};
     `};
+  @media (max-width: 425px) {
+    color: ${({ theme: { colors } }): string => colors.mobile_grey};
+    font-size: 22px;
+  }
 `;
 
 export const StyledInput = styled(InputNumber)`
@@ -61,6 +72,10 @@ export const StyledInput = styled(InputNumber)`
     }
     &:focus {
       background: ${({ theme: { colors } }): string => colors.white};
+    }
+    @media (max-width: 425px) {
+      color: ${({ theme: { colors } }): string => colors.mobile_grey};
+      font-size: 22px;
     }
   }
 `;
